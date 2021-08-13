@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap%27');
+@font-face {
+  font-family: 'portal';
+  src: url(portal.ttf);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-align: center;
+  }
+  
+
+  
+  body {
+    background-image: url(../media/galaxy2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  a {
+      text-decoration: none;
+      color:black;
+      font-family: 'Lobster', sans-serif;
+  }
+  a:hover {
+      text-decoration: underline;
+  }
+  ul, li {
+      list-style: none;
+      line-height: 2;
+  }
+  /* Menu */
+  #nav-menu {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+
+  }
+  
+  #nav-menu .bg {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+
+  }
+  
+  #nav-menu:focus-within .bg {
+    visibility: visible;
+    opacity: 6;
+  }
+  
+  #nav-menu * {
+    visibility: visible;
+  }
+  
+  .button {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    height: 100px;
+    width: 30px;
+    cursor: pointer;
+    margin-left: 26px;
+    touch-action: manipulation;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-appearance: none;
+    z-index: 99;
+    bottom: 900px;
+  }
+
+p
+{
+    font-size: 1.5rem;
+    font-family: 'Lobster', cursive;
+}
+
+h1
+{
+  color:rgba(0, 128, 145, 0.522);
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'portal';
+    font-size: 80px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    
+    
+
+}
+
+#nav-menu:focus-within .button {
+    pointer-events: none;
+  }
+  
+  .icon-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #f5f5f5;
+    transition: .3s;
+  }
+  .icon-bar + .icon-bar {
+    margin-top: 5px;
+  }
+  
+  #nav-menu:focus-within .icon-bar:nth-of-type(1) {
+    transform: translate3d(0,8px,0) rotate(45deg);
+  }
+  #nav-menu:focus-within .icon-bar:nth-of-type(2) {
+    opacity: 0;
+  }
+  #nav-menu:focus-within .icon-bar:nth-of-type(3) {
+    transform: translate3d(0,-8px,0) rotate(-45deg);
+  }
+  
+  #content-menu {
+    margin-top: 5px;
+    padding: 10px;
+    width: 90%;
+    background: whitesmoke;
+    max-width: 300px;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: calc(100% - px);
+    pointer-events: auto;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    transform: translateX(-100%);
+    transition: transform .3s;
+    will-change: transform;
+    contain: paint;
+    opacity: 0.8;
+   
+    
+  }
+  #nav-menu:focus-within #content-menu {
+    transform: none;
+    
+  }
+
+.txt
+  {
+    
+font-family:'Lobster', sans-serif;
+font-size: 15px;
+color: white;
+background-color: black;
+opacity: 55%;
+width: 55%;
+height: 100%;
+margin-left: 350px;
+margin-top: 300px;
+  }
+
+  .txt p
+  {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 15px;
+  }
+
+.p1
+
+ {
+text-align: left;
+}
+.txt ul, li
+{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: left;
+  list-style: circle;
+  margin-left: 33px;
+  font-size: x-large;
+}
+
+.fundo
+ {
+background-color: black;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+
+.fundo p
+{
+font-family: Arial, Helvetica, sans-serif;
+text-align: left;
+margin-left: 60px;
+}
+
+ .fundo h2
+{
+  font-family: 'Lobster', sans-serif;
+  color: antiquewhite;
+  font-size: 100px;
+}
+
+span 
+{
+  text-align: center;
+
+}
+#Cabeçalho /*Header*/
+{
+	background-color: rgb(2, 25, 35); /*Cor de fundo do header*/
+	height: 90px; /*Altura do header*/
+}
+
+#Logo /*Img*/
+{
+	width: 11%; /*Largura da logo*/
+	padding: 13px; /*Espaço entre a logo e o header*/
+	margin-left: 100px; /*Espaço entre o brower esquerdo e a logo*/
+}
+
+
+#Barra_Navegação /*Nav*/
+{
+	margin-left: 300px; /*Espaço entre o brower esquerdo a o nav*/
+	margin-top: -80px; /*Espaço entre o topo do brower e o Nav */
+}
+
+#Barra_Navegação ul /*Nav + ul*/
+{
+	list-style: none; /*Sem marcadores*/
+	position:  relative;
+}
+
+#Barra_Navegação ul li /*Nav + ul + li*/
+{
+	width: 150px; /*Espaço entre as os Titulo da Nav*/
+	float: left; /*Lado a lado*/
+}
+
+#Barra_Navegação a /*Nav + a*/
+{
+	padding: 15px; /*Espaço entre o a = link e o header*/
+	font-family: cursive; /*Tipo de fonte*/
+	display: block; /*Muda o comportamento do espaçamento do a  = link*/
+	color: rgb(255, 255, 255); /*Cor da fonte*/
+	text-decoration: none; /*Sem sublinhado*/
+	text-align: center; /*Centralizado*/
+}
+
+/*Faz as opções sumirem*/
+#Barra_Navegação ul ul /*Nav + ul + ul*/
+{
+	position: absolute;
+	visibility: hidden; /*As opções sumem*/
+}
+
+/*Faz as opções aparecerem*/
+#Barra_Navegação ul li:hover ul /*Nav + ul + li + ul*/
+{
+	visibility: visible; /*As opções voltam em baixo de cada Menu*/
+}
+
+#Barra_Navegação a:hover
+{
+	background-color: rgb(255, 255, 255); /*Cor do hover*/
+	color: rgb(0, 166, 251); /*Cor da fonte com hover*/
+}
+
+#Barra_Navegação ul ul li /*Nav + ul + ul + li*/
+{
+	float:  none; /*Deixa as opções uma em baixo da outra*/
+	border-bottom: solid 1px rgb(204, 204, 204) ; /*Borda nas opções*/
+}
+
+#Barra_Navegação ul ul li a /*Nav + ul + ul + ul + a*/
+{
+	background-color: rgb(5, 25, 35); /*Cor de fundo das opções*/
+	text-align: center;
+}
+ 
+#Inglês
+{
+	margin-right: 150px; /*Espaço entre o brower direito e a logo do inglês*/
+	margin-top: 21px; /*Espaço entre o topo do brower e a logo do Inglês*/
+	float: right; /*Posicionado a direita*/
+}
+/*Configurando o botão do site em max-width: 800px*/ 
+label[for="Botão_Menu"]
+{
+	color: rgb(255, 255, 255); /*Cor do botão do */
+	display: none; /*O label do botão desaparece no max-width: 1148px*/
+	cursor: pointer; /*Mostra o usuario que dá pra clicar*/
+	font-size: 4.5vw; /*Tamanho do botão*/
+	height: 55px; /*Largura do botão*/
+}
+
+#Botão_Menu
+{
+	display: none; /*O input desaparece no max-width: 1148px*/
+}
+
+/*Conteudo da página*/
+#Titulo
+{
+	font-family: cursive; /*Tipo de fonte*/
+	font-size: 3.4vw; /*Tamanho da fonte do titulo*/
+	font-weight: bold; /*Em negrito*/
+	text-align: center; /*Centralizado*/
+	margin-top: 50px; /*Espaço entre o topo do brower  e o titulo*/
+	animation: titulo 2s 5; /*Tempo de animação*/
+	animation-direction: alternate-reverse; /*Estilo da animação*/
+	animation-iteration-count: 2; /*Quantidade que a animação roda*/
+}
+
+@keyframes titulo
+{
+	from {
+		opacity: 0; /*nivel de tranparencia, aqui tá invisivel*/
+		transform: translateX(100px);
+	}
+	to{
+		opacity: 2;
+		transform: translateX(0px);
+	}
+}
+
+.Pergunta
+{
+	background-color: rgb(238, 238, 238); /*Cor de fundo das perguntas*/
+	color: rgb(68, 68, 68); /*Cor da fonte*/
+	cursor: pointer; /*Mostra pro usuario que dá pra clicar*/
+	padding: 18px; /*Espaço ao redor da pergunta*/
+	width: 60%; /*Largura da pergunta*/
+	border: none; /*Sem borda*/
+	outline: none; /*Sem borda em volta da pergunta*/
+	font-size: 1.3vw; /*Tamanho da fonte*/
+	transition: 0.4s; /*Tempo de transição*/
+	margin-top: 25px; /*Espaço entre o topo do brower e as perguntas*/
+	margin-left: auto; /*Espaço entre o broweer esquerdo e as perguntas*/
+  margin-right: auto;
+  display: block;
+  
+}
+
+.active, .Pergunta:hover
+{
+	background-color: rgb(204, 204, 204); /*Cor do fundo das perguntas quando passar o mouse em cima*/
+}
+
+.Pergunta:after
+{
+	content: '\002B';/*Sinal de mais*/
+	color: rgb(119, 119, 119); /*Cor da fonte*/
+	font-weight: bold; /*Em negrito*/
+	float: right; /*Lado a lado a direita*/
+	margin-left: auto; /*Espaço entre o brower esquerdo e a pergunta*/
+  margin-right: auto;
+  display: block;
+}
+
+.active:after
+{
+	content: "\2212"; /*Sinal de menos*/
+}
+
+#Resposta
+{
+	padding: 0px 18px; /*Espaço ao redor da resposta*/
+	text-align: center; /*Texto centralizado*/
+	max-height: 0;
+	overflow: hidden; /*Resposta desaparece*/
+	transition: max-height 0.2s ease-out;
+	width: 45%; /*Largura da resposta*/
+	margin-left: auto; /*Espaço entre o brower esquerdo e as respostas*/
+  margin-right: auto;
+  display:block;
+}
+
+#Resp
+{
+	font-family: cursive; /*Tipo de fonte*/
+	margin-bottom: 5px; /*Espaço entre a parte de baixo do brower e a resposta*/
+}
+
+.list_ben{
+  color:white;
+  font-family: arial;
+  font-size: x-large;
+  margin-left: 70px;
+}
+
+/*.faq 
+{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}*/
